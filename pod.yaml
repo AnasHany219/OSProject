@@ -1,0 +1,14 @@
+apiVersion: v1
+
+kind: Pod
+
+metadata:
+  name: pod-porject
+  labels:
+    app: pod-porject-lbl
+    
+spec:
+  containers:
+    - image: anashany219/projectimage
+      name: projectimage
+      imagePullPolicy: IfNotPresent

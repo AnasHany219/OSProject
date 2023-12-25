@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: porject-deployment
+
+spec:
+  replicas: 3
+  
+  selector:
+    matchLabels:
+      app: pod-porject-lbl
+  
+  template:
+    metadata:
+      name: pod-porject
+      labels:
+        app: pod-porject-lbl
+    spec:
+      containers:
+        - image: anashany219/projectimage
+          name: projectimage
